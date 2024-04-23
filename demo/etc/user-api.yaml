@@ -1,0 +1,4 @@
+Name: user-api
+Host: 0.0.0.0
+Port: 8888
+DataSource: postgres://postgres.cvyevdlmjlexwdcugsdf:H0psz4WjkulFrlu1@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres
