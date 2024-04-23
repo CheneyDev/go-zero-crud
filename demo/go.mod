@@ -2,7 +2,10 @@ module demo
 
 go 1.22.2
 
-require github.com/zeromicro/go-zero v1.6.4
+require (
+	github.com/lib/pq v1.10.9
+	github.com/zeromicro/go-zero v1.6.4
+)
 
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
@@ -16,7 +19,6 @@ require (
 	github.com/golang-jwt/jwt/v4 v4.5.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.18.0 // indirect
-	github.com/lib/pq v1.10.9 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/matttproud/golang_protobuf_extensions/v2 v2.0.0 // indirect

@@ -14,6 +14,20 @@ type (
 		Name  string `json:"name"`
 		Email string `json:"email"`
 	}
+	UpdateRequest {
+		Id    int64  `path:"id"`
+		Name  string `json:"name,optional"`
+		Email string `json:"email,optional"`
+	}
+	UpdateResponse {
+		Id int64 `json:"id"`
+	}
+	DeleteRequest {
+		Id int64 `path:"id"`
+	}
+	DeleteResponse {
+		Id int64 `json:"id"`
+	}
 )
 
 service user-api {
@@ -22,5 +36,11 @@ service user-api {
 
 	@handler GetHandler
 	get /users/:id (GetRequest) returns (GetResponse)
+
+	@handler UpdateHandler
+	put /users/:id (UpdateRequest) returns (UpdateResponse)
+
+	@handler DeleteHandler
+	delete /users/:id (DeleteRequest) returns (DeleteResponse)
 }
 

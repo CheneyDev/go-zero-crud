@@ -24,7 +24,6 @@ func NewGetLogic(ctx context.Context, svcCtx *svc.ServiceContext) *GetLogic {
 }
 
 func (l *GetLogic) Get(req *types.GetRequest) (resp *types.GetResponse, err error) {
-	// todo: add your logic here and delete this line
 
 	user, err := l.svcCtx.UserModel.FindOne(l.ctx, req.Id)
 	if err != nil {

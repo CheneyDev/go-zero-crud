@@ -22,6 +22,16 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 				Path:    "/users/:id",
 				Handler: GetHandler(serverCtx),
 			},
+			{
+				Method:  http.MethodPut,
+				Path:    "/users/:id",
+				Handler: UpdateHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodDelete,
+				Path:    "/users/:id",
+				Handler: DeleteHandler(serverCtx),
+			},
 		},
 	)
 }

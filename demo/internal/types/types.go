@@ -10,6 +10,14 @@ type CreateResponse struct {
 	Id int64 `json:"id"`
 }
 
+type DeleteRequest struct {
+	Id int64 `path:"id"`
+}
+
+type DeleteResponse struct {
+	Id int64 `json:"id"`
+}
+
 type GetRequest struct {
 	Id int64 `path:"id"`
 }
@@ -18,4 +26,14 @@ type GetResponse struct {
 	Id    int64  `json:"id"`
 	Name  string `json:"name"`
 	Email string `json:"email"`
+}
+
+type UpdateRequest struct {
+	Id    int64  `path:"id"`
+	Name  string `json:"name,optional"`
+	Email string `json:"email,optional"`
+}
+
+type UpdateResponse struct {
+	Id int64 `json:"id"`
 }
