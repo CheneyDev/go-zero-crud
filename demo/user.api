@@ -1,0 +1,26 @@
+type (
+	CreateRequest {
+		Name  string `json:"name"`
+		Email string `json:"email"`
+	}
+	CreateResponse {
+		Id int64 `json:"id"`
+	}
+	GetRequest {
+		Id int64 `path:"id"`
+	}
+	GetResponse {
+		Id    int64  `json:"id"`
+		Name  string `json:"name"`
+		Email string `json:"email"`
+	}
+)
+
+service user-api {
+	@handler CreateHandler
+	post /users (CreateRequest) returns (CreateResponse)
+
+	@handler GetHandler
+	get /users/:id (GetRequest) returns (GetResponse)
+}
+
